@@ -21,7 +21,7 @@ const Navbar = ({ user, onLogout }) => {
           <span className="inline-flex items-center">
             <svg className="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M21 16V8l-6-3-4 2-6-3v12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M7 13v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M11 11v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </span>
-          <div className="text-xl font-bold neon text-base-content">Factory ERP</div>
+          <div className="text-xl font-bold neon text-base-content">Employee & WorkOrder ERP</div>
         </div>
 
         <div className="flex items-center gap-3">
