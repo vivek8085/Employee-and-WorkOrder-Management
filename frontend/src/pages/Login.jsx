@@ -34,7 +34,7 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-base-200">
+    <div className="items-center justify-center h-screen bg-base-200">
         <h1 className="text-center">Use credentials → Admin: admin@gmail.com | Manager: manager@gmail.com | Employee: employee1@gmail.com | Password: 123456 (for all)</h1>
       <div className="card w-96 bg-base-100 shadow-xl p-6">
   <h2 className="text-xl font-bold mb-4 text-center"><LockIcon className="w-5 h-5 mr-2 inline"/>Login</h2>
