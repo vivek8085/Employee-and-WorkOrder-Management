@@ -44,7 +44,7 @@ const Dashboard = ({ onNavigate }) => {
           👋 Welcome back, {adminName || "Admin"}!
         </h1>
         <p className="text-gray-500">
-          Here’s an overview of your factory performance today.
+          Here’s an overview of your Company performance today.
         </p>
       </div>
 

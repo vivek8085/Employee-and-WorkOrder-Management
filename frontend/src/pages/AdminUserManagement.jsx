@@ -54,11 +54,10 @@ const AdminUserManagement = () => {
   };
 
   const handleDeleteUser = async (id) => {
-    // Open modal instead - this function kept for backwards compat but will open modal
     setDeleteTarget(id);
   };
 
-  const [deleteTarget, setDeleteTarget] = useState(null); // holds user id to delete
+  const [deleteTarget, setDeleteTarget] = useState(null);
 
   const confirmDelete = async () => {
     if (!deleteTarget) return;

@@ -6,22 +6,19 @@ import Department from "../models/Department.js";
 
 const router = express.Router();
 
-// Register new user (Admin creates accounts)
+// Register new user
 router.post("/register", async (req, res) => {
   try {
     let { name, email, password, role, department } = req.body;
 
-    // Normalize department: convert empty string to undefined so Mongoose won't try to cast it
     if (department === "" || department === null) {
       department = undefined;
     }
 
-    // require department for manager/employee roles
     if ((role === "manager" || role === "employee") && !department) {
       return res.status(400).json({ error: "Department is required for manager/employee roles" });
     }
 
-    // if department provided, validate it exists
     if (department) {
       const dept = await Department.findById(department);
       if (!dept) return res.status(400).json({ error: "Invalid department id" });

@@ -34,9 +34,11 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-base-200">
-      <div className="card w-96 bg-base-100 shadow-xl p-6">
-  <h2 className="text-xl font-bold mb-4 text-center"><LockIcon className="w-5 h-5 mr-2 inline"/>Login</h2>
+    <div className="flex items-center justify-center h-screen bg-base-200" style={{ backgroundImage: "url('/back.gif')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="card w-96 bg-base-100 shadow-xl p-6 animate-fade-in-up">
+  <h2 className="text-xl font-bold mb-4 text-center"><LockIcon className="w-5 h-5 mr-2 inline"/>Login<div className="text-red-500 text-sm font-semibold mb-3">
+  Use credentials → Admin: admin@gmail.com , Manager: manager@gmail.com ,Employee: employee1@gmail.com | Password: 123456 (for all)
+</div></h2>
         <form onSubmit={handleLogin}>
           <input
             type="email"

@@ -16,26 +16,26 @@ const io = new Server(server, {
   cors: { origin: "*" },
 });
 
-// ✅ Socket connections
+// Socket connections
 io.on("connection", (socket) => {
-  console.log("🟢 A user connected:", socket.id);
+  console.log("A user connected:", socket.id);
 
   socket.on("disconnect", () => {
-    console.log("🔴 User disconnected:", socket.id);
+    console.log("User disconnected:", socket.id);
   });
 });
 
 // Export io for other files
 export { io };
 
-// ✅ Connect to MongoDB
+// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Atlas Connected"))
+  .then(() => console.log("MongoDB Atlas Connected"))
   .catch((err) => console.error(err));
 
 // Default route
-app.get("/", (req, res) => res.send("Factory ERP Backend Running ✅"));
+app.get("/", (req, res) => res.send("Backend Running"));
 
 // Import routes (example)
 import authRoutes from "./routes/authRoutes.js";
@@ -52,4 +52,4 @@ app.use("/api/dashboard", dashboardRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
